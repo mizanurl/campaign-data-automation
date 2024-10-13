@@ -27,6 +27,8 @@ app.post('/webhook', (req, res) => {
         const userId = event.entry[0].messaging[0].sender.id;
         let adId = event.entry[0].messaging[0].ad_id;
 
+        console.log('ADD ID: ' + adId);
+
         // Remove this when ap is live
         if ( adId == undefined ) {
             adId = '120212943911610130';
