@@ -23,6 +23,9 @@ app.get('/webhook', (req, res) => {
 app.post('/webhook', (req, res) => {
     const event = req.body;
 
+    console.log(JSON.stringify(event, null, 2));
+
+
     if (event && event.entry) {
         const userId = event.entry[0].messaging[0].sender.id;
         let adId = event.entry[0].messaging[0].ad_id;
