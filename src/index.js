@@ -41,7 +41,7 @@ app.post('/webhook', (req, res) => {
         const serverWebhook = process.env.WEBHOOK_URL;
 
         // Step 1: Fetch user data
-        axios.get(`https://graph.facebook.com/v20.0/${userId}?debug=all`, {
+        axios.get(`https://graph.facebook.com/v20.0/${userId}`, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             },
